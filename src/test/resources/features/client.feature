@@ -1,6 +1,6 @@
 Feature: Gestion des informations clients
   Étant donné que nous sommes une entreprise de vente de pièces automobiles
-  sur le matricule de lsa voiture, nous souhaitons informer nos clients des nouveaux arrivages de pièces. Cette information sera basée sur
+  nous souhaitons informer nos clients des nouveaux arrivages de pièces. Cette information sera basée sur
   les données de la dernière voiture enregistrée par le client dans notre système.
 
 
