@@ -45,14 +45,14 @@ class ClientTest {
         List<Voiture> voitures = new ArrayList<>();
         voitures.add(new Voiture(3, "Ford"));
         Client client = new Client("Grace", voitures);
-        String expected = "Client possède une voiture avec matricule 3 et marque Ford";
+        String expected = client.getName() + " possède une voiture avec matricule 3 et marque Ford";
         assertEquals(expected, client.obtenirInfoVoiture());
     }
 
     @Test
     public void testObtenirInfoVoitureWithoutCar() {
         Client client = new Client("David", new ArrayList<>());
-        String expected = "Le client n'a pas de voiture.";
+        String expected = client.getName() + " n'a pas de voiture.";
         assertEquals(expected, client.obtenirInfoVoiture());
     }
 

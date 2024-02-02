@@ -47,9 +47,9 @@ public class Client {
             String marqueVoiture = premiereVoiture.getMarque();
 
             // Construction d'une information basée sur la contribution des deux objets
-            return "Client possède une voiture avec matricule " + matriculeVoiture + " et marque " + marqueVoiture;
+            return name + " possède une voiture avec matricule " + matriculeVoiture + " et marque " + marqueVoiture;
         } else {
-            return "Le client n'a pas de voiture.";
+            return name + " n'a pas de voiture.";
         }
     }
 }

@@ -38,18 +38,9 @@ public class VoitureTest {
 
 
     @Test
-    public void testAfficherInfos() {
+    public void testObtenirInfos() {
         Voiture voiture = new Voiture(777, "Mazda");
-
-        // Redirect System.out to capture printed output
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
-
-
-
-        // Reset System.out to the original OutputStream
-        System.setOut(System.out);
-
+        assertEquals("Voiture - Matricule : 777, Marque : Mazda", voiture.obtenirInfos());
 
     }
 }
