@@ -17,14 +17,16 @@ public class ClientSteps {
         client = new Client(name, null);
     }
 
-    @Given("le client possède une voiture avec matricule {int} et marque {string}")
-    public void leClientPossedeUneVoitureAvecMatriculeEtMarque(int matricule, String marque) {
+    @Given("{string} possède une voiture avec matricule {int} et marque {string}")
+    public void leClientPossedeUneVoitureAvecMatriculeEtMarque(String name, int matricule, String marque) {
         Voiture voiture = new Voiture(matricule, marque);
+        client.setName(name);
         client.setVoiture(Arrays.asList(voiture));
     }
 
-    @Given("le client n'a pas de voiture")
-    public void leClientNaPasDeVoiture() {
+    @Given("{string} n'a pas de voiture")
+    public void leClientNaPasDeVoiture(String name) {
+        client.setName(name);
         client.setVoiture(null);
     }
 
@@ -38,5 +40,3 @@ public class ClientSteps {
         assertEquals(expected, result);
     }
 }
-
-
